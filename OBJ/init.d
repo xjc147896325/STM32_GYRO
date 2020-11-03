@@ -40,6 +40,7 @@
 ..\obj\init.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\init.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\init.o: ..\HARDWARE\inc\drv_nvic.h
+..\obj\init.o: ..\HARDWARE\inc\drv_can.h
 ..\obj\init.o: ..\HARDWARE\inc\drv_gpio.h
 ..\obj\init.o: ..\HARDWARE\inc\drv_timer.h
 ..\obj\init.o: ..\HARDWARE\inc\drv_adc.h
@@ -52,5 +53,3 @@
 ..\obj\init.o: ..\USER\main.h
 ..\obj\init.o: ..\PERIPH\inc\bsp_led.h
 ..\obj\init.o: ..\PERIPH\inc\bsp_ad7190.h
-..\obj\init.o: ..\ALGORITHM\inc\distance.h
-..\obj\init.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\math.h

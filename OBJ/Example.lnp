@@ -10,6 +10,7 @@
 "..\obj\drv_timer.o"
 "..\obj\drv_gpio.o"
 "..\obj\drv_adc.o"
+"..\obj\drv_can.o"
 "..\obj\bsp_oled.o"
 "..\obj\oled_font.o"
 "..\obj\bsp_led.o"

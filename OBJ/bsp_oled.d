@@ -44,6 +44,7 @@
 ..\obj\bsp_oled.o: ..\HARDWARE\inc\drv_uart.h
 ..\obj\bsp_oled.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\bsp_oled.o: ..\HARDWARE\inc\drv_nvic.h
+..\obj\bsp_oled.o: ..\HARDWARE\inc\drv_can.h
 ..\obj\bsp_oled.o: ..\HARDWARE\inc\drv_gpio.h
 ..\obj\bsp_oled.o: ..\HARDWARE\inc\drv_timer.h
 ..\obj\bsp_oled.o: ..\HARDWARE\inc\drv_adc.h
@@ -53,5 +54,3 @@
 ..\obj\bsp_oled.o: ..\PERIPH\inc\bsp_oled.h
 ..\obj\bsp_oled.o: ..\PERIPH\inc\bsp_led.h
 ..\obj\bsp_oled.o: ..\PERIPH\inc\bsp_ad7190.h
-..\obj\bsp_oled.o: ..\ALGORITHM\inc\distance.h
-..\obj\bsp_oled.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\math.h

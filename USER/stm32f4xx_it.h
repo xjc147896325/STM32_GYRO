@@ -37,10 +37,9 @@
 #include "stm32f4xx.h"
 #include "drv_systick.h"
 #include "drv_adc.h"
+#include "drv_can.h"
 #include "bsp_led.h"
 #include "bsp_ad7190.h"
-#include "distance.h"
-#include "protocol.h"
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/

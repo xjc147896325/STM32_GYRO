@@ -43,6 +43,7 @@
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\inc\drv_uart.h
 ..\obj\stm32f4xx_it.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\stm32f4xx_it.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\stm32f4xx_it.o: ..\HARDWARE\inc\drv_can.h
 ..\obj\stm32f4xx_it.o: ..\PERIPH\inc\bsp_led.h
 ..\obj\stm32f4xx_it.o: ..\PERIPH\inc\bsp_ad7190.h
 ..\obj\stm32f4xx_it.o: ..\HARDWARE\inc\drv_spi.h
@@ -55,6 +56,3 @@
 ..\obj\stm32f4xx_it.o: ..\USER\main.h
 ..\obj\stm32f4xx_it.o: ..\USER\init.h
 ..\obj\stm32f4xx_it.o: ..\PERIPH\inc\bsp_ad7190.h
-..\obj\stm32f4xx_it.o: ..\ALGORITHM\inc\distance.h
-..\obj\stm32f4xx_it.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\math.h
-..\obj\stm32f4xx_it.o: ..\ALGORITHM\inc\protocol.h

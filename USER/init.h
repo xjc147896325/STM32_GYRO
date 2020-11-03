@@ -33,6 +33,7 @@
 #include "stm32f4xx.h"
 #include "drv_systick.h"
 #include "drv_uart.h"
+#include "drv_can.h"
 #include "drv_gpio.h"
 #include "drv_timer.h"
 #include "drv_adc.h"
@@ -40,7 +41,6 @@
 #include "bsp_oled.h"
 #include "bsp_led.h"
 #include "bsp_ad7190.h"
-#include "distance.h"
 
 void System_Init(void);
 

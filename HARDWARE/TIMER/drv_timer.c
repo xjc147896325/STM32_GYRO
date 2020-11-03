@@ -5,7 +5,10 @@
   * @version v1.0
   * @date    20-09-17
   * @brief   中断函数在it内
-							TIM2_Init()
+			 TIM2_Init(uint16_t arr, uint16_t psc)
+			 TIM3_Init(uint16_t arr, uint16_t psc)
+			 
+			 
   ******************************************************************************
   */
 #include "drv_timer.h"
