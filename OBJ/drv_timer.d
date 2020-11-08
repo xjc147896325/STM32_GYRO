@@ -36,3 +36,7 @@
 ..\obj\drv_timer.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 ..\obj\drv_timer.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\drv_timer.o: ..\HARDWARE\inc\drv_nvic.h
+..\obj\drv_timer.o: ..\HARDWARE\inc\drv_gpio.h
+..\obj\drv_timer.o: ..\HARDWARE\inc\drv_uart.h
+..\obj\drv_timer.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\drv_timer.o: D:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h

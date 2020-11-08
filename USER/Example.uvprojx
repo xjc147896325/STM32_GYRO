@@ -472,6 +472,11 @@
               <FileType>1</FileType>
               <FilePath>..\PERIPH\AD7190\bsp_ad7190.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_esc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\PERIPH\C6X0\bsp_esc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
