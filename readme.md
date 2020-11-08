@@ -27,8 +27,9 @@ V0.1
 
 
 
-
-
+20-11-09 00:25
+加了PWM 试了半天 真的吃屎 加了C6x0 未测试
+pwm为4和14
 
 
 
@@ -45,7 +46,7 @@ Pin Config
 |SPI1_NSS|PA4|
 |SPI1_SCK(SCK)|PA5|
 |SPI1_MOSI|PA6|
-|SPI1_MISO|PA7|
+|SPI1_MISO/pwm14_ch1|PA7|
 |U1_RX|PA9|
 |U1_TX|PA10|
 |CAN1_RX|PA11|
@@ -62,7 +63,7 @@ Pin Config
 |NONE|PB4|
 |CAN2_RX|PB5|
 |CAN2_TX|PB6|
-|RFID_Reset|PB7|
+|RFID_Reset/pwm4_ch2|PB7|
 |I2C2_SCL|PB10|
 |I2C2_SDA|PB11|
 |||
@@ -86,5 +87,5 @@ Pin Config
 |||
 |||
 |||
-|PWM1|PE5|
+|||
 |||
