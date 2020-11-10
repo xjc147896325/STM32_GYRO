@@ -56,3 +56,4 @@
 ..\obj\stm32f4xx_it.o: ..\USER\main.h
 ..\obj\stm32f4xx_it.o: ..\USER\init.h
 ..\obj\stm32f4xx_it.o: ..\PERIPH\inc\bsp_ad7190.h
+..\obj\stm32f4xx_it.o: ..\PERIPH\inc\bsp_joystick.h

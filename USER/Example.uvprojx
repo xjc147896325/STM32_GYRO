@@ -477,6 +477,16 @@
               <FileType>1</FileType>
               <FilePath>..\PERIPH\C6X0\bsp_esc.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_joystick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\PERIPH\JOYSTICK\bsp_joystick.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_robomodule.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\PERIPH\RoboModule\bsp_robomodule.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

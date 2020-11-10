@@ -32,6 +32,8 @@ void System_Init(void)
 	
 	
 	USART2_Init(115200);
+	
+	
 	TIM2_Init(8399,9);
 	TIM3_Init(8399,9);
 	TIM4_PWM_Init(499, 83, GPIOB, GPIO_Pin_7);

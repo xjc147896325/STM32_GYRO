@@ -184,10 +184,7 @@ void USART1_IRQHandler(void)
   */
 void USART2_IRQHandler(void)
 {
-	if(USART_GetFlagStatus(USART2, USART_IT_RXNE) != RESET);
-	{
-		USART_ClearITPendingBit(USART2, USART_IT_RXNE);
-	}
+	RemoteAnalyzeTask();
 }
 
 /**

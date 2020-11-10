@@ -16,6 +16,8 @@
 "..\obj\bsp_led.o"
 "..\obj\bsp_ad7190.o"
 "..\obj\bsp_esc.o"
+"..\obj\bsp_joystick.o"
+"..\obj\bsp_robomodule.o"
 "..\obj\startup_stm32f40_41xxx.o"
 "..\obj\misc.o"
 "..\obj\stm32f4xx_adc.o"

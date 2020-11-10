@@ -40,6 +40,7 @@
 #include "drv_can.h"
 #include "bsp_led.h"
 #include "bsp_ad7190.h"
+#include "bsp_joystick.h"
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
