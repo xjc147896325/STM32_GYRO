@@ -5,7 +5,7 @@
   * @version v1.1
   * @date    20-10-10
   * @brief   LED_Init();
-			 void LED_Task(LED_Typedef LEDx)
+			 void LED_Task(LED_Typedef LEDx) //
 
   ******************************************************************************
   */
@@ -22,20 +22,42 @@ void LED_Init(void)
 
 void LED_Task(LED_Typedef LEDx, uint32_t interval)
 {
-	static uint16_t i = 0, Flag = 0;
-	if(i >= interval)
+	static uint16_t val[4]  = {0};
+	static uint16_t Flag[4] = {0};
+	uint16_t        num     =  0 ;
+	
+	switch(LEDx)
 	{
-		if(Flag)
+		case(LED0):
+		{
+			num = 0;
+		}
+		case(LED1):
+		{
+			num = 1;
+		}
+		case(LED2):
+		{
+			num = 2;
+		}
+		case(LED3):
+		{
+			num = 3;
+		}
+	}
+	if(val[num] >= interval)
+	{
+		if(Flag[num])
 		{
 			GPIO_ResetBits(GPIOC,LEDx); 
-			Flag = 0;
+			Flag[num] = 0;
 		}
 		else
 		{
 			GPIO_SetBits(GPIOC,LEDx); 
-			Flag = 1;
+			Flag[num] = 1;
 		}
-		i = 0;
+		val[num] = 0;
 	}
-	i++;
+	val[num]++;
 }
