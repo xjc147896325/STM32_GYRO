@@ -5,8 +5,8 @@
   * @version v1.1
   * @date    20-10-10
   * @brief   LED_Init();
-			 void LED_Task(LED_Typedef LEDx) //
-
+			 void LED_Task(LED_Typedef LEDx, uint32_t interval) //LEDx:LED几 interval:进多少次函数后翻转
+			 // wait for test
   ******************************************************************************
   */
 	
