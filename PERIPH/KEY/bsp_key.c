@@ -38,12 +38,12 @@ int8_t Get_Keyx_Status(KEY_Typedef KEYx)
 		case(KEY0):
 		{
 			return GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_4);  
-			break;
+			//break;
 		}
 		case(KEY1):
 		{
 			return GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_5);  
-			break;
+			//break;
 		}
 		default:
 		{

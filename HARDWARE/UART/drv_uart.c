@@ -71,19 +71,19 @@ void USART2_Init( uint32_t BaudRate)
 	GPIO_PinAFConfig(GPIOA,GPIO_PinSource2,GPIO_AF_USART1);
 	GPIO_PinAFConfig(GPIOA,GPIO_PinSource3,GPIO_AF_USART1);
 	
-	GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_2 | GPIO_Pin_3;
-	GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_AF;
-	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-	GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOA,&GPIO_InitStructure);
-	
-	USART_InitStructure.USART_BaudRate            = BaudRate;
-	USART_InitStructure.USART_WordLength          = USART_WordLength_8b;
-	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-	USART_InitStructure.USART_Mode                = USART_Mode_Rx | USART_Mode_Tx;
-	USART_InitStructure.USART_Parity              = USART_Parity_No;
-	USART_InitStructure.USART_StopBits            = USART_StopBits_1;
+	GPIO_InitStructure.GPIO_Pin                          = GPIO_Pin_2 | GPIO_Pin_3;
+	GPIO_InitStructure.GPIO_Mode                         = GPIO_Mode_AF;
+	GPIO_InitStructure.GPIO_OType                        = GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_PuPd                         = GPIO_PuPd_UP;
+	GPIO_InitStructure.GPIO_Speed                        = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA,&GPIO_InitStructure);                
+												         
+	USART_InitStructure.USART_BaudRate                   = BaudRate;
+	USART_InitStructure.USART_WordLength                 = USART_WordLength_8b;
+	USART_InitStructure.USART_HardwareFlowControl        = USART_HardwareFlowControl_None;
+	USART_InitStructure.USART_Mode                       = USART_Mode_Rx | USART_Mode_Tx;
+	USART_InitStructure.USART_Parity                     = USART_Parity_No;
+	USART_InitStructure.USART_StopBits                   = USART_StopBits_1;
 	USART_Init(USART2,&USART_InitStructure);
 	
 	NVIC_InitStructure.NVIC_IRQChannel                   = USART2_IRQn;
@@ -341,8 +341,66 @@ char *itoa(int value, char *string, int radix)
 
 
 
+/* 
+
+-----------------------------------
+                test
+-----------------------------------
+
+*/
+/*-----------------------
+				泽耀科技
+-----------------------*/
+/**
+  * @brief :串口发送数据
+  * @param :
+  *			@TxBuffer:发送数据首地址
+  *			@Length:数据长度
+  * @note  :无
+  * @retval:无
+  */
+void drv_uart_tx_bytes( uint8_t* TxBuffer, uint8_t Length )
+{
+	while( Length-- )
+	{
+		while( RESET == USART_GetFlagStatus( USART2, USART_FLAG_TXE ));
+		USART2->DR = *TxBuffer;
+		TxBuffer++;
+	}
+}
 
 
+
+
+/**
+  * @brief :串口接收数据
+  * @param :
+  *			@RxBuffer:发送数据首地址
+  * @note  :无
+  * @retval:接收到的字节个数
+  */
+uint8_t drv_uart_rx_bytes( uint8_t* RxBuffer )
+{
+	uint8_t l_RxLength = 0;
+	uint16_t l_UartRxTimOut = 0x7FFF;
+	
+	while( l_UartRxTimOut-- )			//等待查询串口数据
+	{
+		if( RESET != USART_GetFlagStatus( USART2, USART_FLAG_RXNE ))
+		{
+			*RxBuffer = (uint8_t)USART2->DR;
+			RxBuffer++;
+			l_RxLength++;
+			l_UartRxTimOut = 0x7FFF;	//接收到一个字符，回复等待时间
+		}
+		if( 100 == l_RxLength )
+		{
+			break;		//不能超过100个字节
+		}
+	}
+	
+	return l_RxLength;					//等待超时，数据接收完成
+}
 
 
 

@@ -31,6 +31,8 @@ void USART6_Init(uint32_t BaudRate);
 
 void Serial_SendByte(Serial_TypeDef *Serialx, uint8_t Data);
 void Serial_Send(Serial_TypeDef *Serialx,const char *Data,...);
+uint8_t drv_uart_rx_bytes( uint8_t* RxBuffer );
+void drv_uart_tx_bytes( uint8_t* TxBuffer, uint8_t Length );
 
 char *itoa(int value, char *string, int radix);
 

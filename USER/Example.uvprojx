@@ -702,6 +702,11 @@
               <FileType>1</FileType>
               <FilePath>..\ALGORITHM\PROTOCOL\protocol.c</FilePath>
             </File>
+            <File>
+              <FileName>transmit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ALGORITHM\TRANSMIT\transmit.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

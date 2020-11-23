@@ -35,7 +35,7 @@ void System_Init(void)
 	
 	
 	TIM2_Init(8399,9);
-	TIM3_Init(8399,9);
+	TIM3_Init(8399,499);
 	TIM4_PWM_Init(499, 83, GPIOB, GPIO_Pin_7);
 	TIM14_PWM_Init(499, 83, GPIOA, GPIO_Pin_7);
 	

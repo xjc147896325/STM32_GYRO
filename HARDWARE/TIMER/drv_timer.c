@@ -48,7 +48,7 @@ void TIM3_Init(uint16_t arr, uint16_t psc)   //1ms 8399,9
 	TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
 	NVIC_InitTypeDef         NVIC_InitStructure;
 
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE); //定时器2时钟使能
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE); //定时器2时钟使能
 
 	/*定时器2初始化*/
 	TIM_TimeBaseStructure.TIM_Period        = arr;                //设置重载值

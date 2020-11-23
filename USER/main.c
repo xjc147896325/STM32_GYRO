@@ -20,8 +20,7 @@ int main()
 	
 	while(1)
 	{
-		Set_Pwm2(TIM4,300);
-		Set_Pwm1(TIM14,200);
+		//Serial_Send(Serial1,"hello \r\n");
 		
 		
 	}

@@ -244,6 +244,7 @@ void TIM3_IRQHandler(void)
 	if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET)   //每隔5ms进入一次更新中断
 	{	
 		TIM_ClearITPendingBit(TIM3, TIM_IT_Update);      //清除标志位
+		
 	}
 }
 
