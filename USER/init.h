@@ -41,6 +41,7 @@
 #include "bsp_oled.h"
 #include "bsp_led.h"
 #include "bsp_ad7190.h"
+#include "gyro.h"
 
 void System_Init(void);
 

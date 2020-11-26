@@ -207,9 +207,14 @@ void USART3_IRQHandler(void)
   */
 void USART6_IRQHandler(void)
 {
+	uint8_t RxData;	
+
 	if(USART_GetFlagStatus(USART6, USART_IT_RXNE) != RESET);
 	{
 		USART_ClearITPendingBit(USART6, USART_IT_RXNE);
+		RxData = USART_ReceiveData(USART6);
+
+		Unpack_Gyro_Info(RxData);
 	}
 }
 
@@ -235,16 +240,16 @@ void TIM2_IRQHandler(void)
 }
 
 /**
-* @brief 定时器3中断函数，5ms
+* @brief 定时器3中断函数，1s
 * @param none
 * @return none
 */	
 void TIM3_IRQHandler(void)
 {	
-	if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET)   //每隔5ms进入一次更新中断
+	if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET)   //每隔1s进入一次更新中断
 	{	
 		TIM_ClearITPendingBit(TIM3, TIM_IT_Update);      //清除标志位
-		
+		Serial_Send(Serial1,"Gyro rate = %d \r\n",Get_Frame_rate());   
 	}
 }
 
